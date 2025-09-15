@@ -32,6 +32,7 @@ function AddTodo({ onAddTodo }: AddTodoProps) {
       />
       <input
         type="text"
+        id="wording"
         placeholder="What needs to be done?"
         className="w-full border-none border-b border-transparent outline-none bg-transparent px-4 py-3 text-xl md:text-2xl placeholder:italic placeholder:text-gray-300 placeholder:font-normal focus:border-b focus:border-gray-300"
         onChange={handleChange}

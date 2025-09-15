@@ -9,6 +9,7 @@ interface TodoToolsProps {
 
 function TodoTools({ todos, view, onViewChange, onClearCompleted }: TodoToolsProps) {
   const activeList = todos.filter((item: IItem) => item.done === false);
+  console.log(view);
 
   function handleClickView(newView: 'All' | 'Active' | 'Completed') {
     onViewChange(newView);
@@ -27,8 +28,8 @@ function TodoTools({ todos, view, onViewChange, onClearCompleted }: TodoToolsPro
         <button
           aria-label="All"
           onClick={() => handleClickView('All')}
-          className={`bg-transparent border-none rounded cursor-pointer px-2 py-1 ${
-            view === 'All' ? 'border border-pink-200' : ''
+          className={`bg-transparent active:scale-95 rounded cursor-pointer px-2 py-1 ${
+            view === 'All' ? 'border border-pink-200' : 'border-none'
           }`}
         >
           All
@@ -36,8 +37,8 @@ function TodoTools({ todos, view, onViewChange, onClearCompleted }: TodoToolsPro
         <button
           aria-label="Active"
           onClick={() => handleClickView('Active')}
-          className={`bg-transparent border-none rounded cursor-pointer px-2 py-1 mx-3 ${
-            view === 'Active' ? 'border border-pink-200' : ''
+          className={`bg-transparent active:scale-95 rounded cursor-pointer px-2 py-1 mx-3 ${
+            view === 'Active' ? 'border border-pink-200' : 'border-none'
           }`}
         >
           Active
@@ -45,8 +46,8 @@ function TodoTools({ todos, view, onViewChange, onClearCompleted }: TodoToolsPro
         <button
           aria-label="Completed"
           onClick={() => handleClickView('Completed')}
-          className={`bg-transparent border-none rounded cursor-pointer px-2 py-1 ${
-            view === 'Completed' ? 'border border-pink-200' : ''
+          className={`bg-transparent active:scale-95 rounded cursor-pointer px-2 py-1 ${
+            view === 'Completed' ? 'border border-pink-200' : 'border-none'
           }`}
         >
           Completed
@@ -57,7 +58,7 @@ function TodoTools({ todos, view, onViewChange, onClearCompleted }: TodoToolsPro
         <button
           aria-label="clear"
           onClick={onClearCompleted}
-          className="bg-transparent border-none rounded cursor-pointer px-2 py-1"
+          className="bg-transparent border-none rounded cursor-pointer px-2 py-1 active:scale-95"
         >
           Clear Completed
         </button>
