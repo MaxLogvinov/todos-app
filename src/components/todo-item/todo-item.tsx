@@ -1,15 +1,19 @@
+import { useDispatch } from 'react-redux';
+import { toggleTodo } from '../../servises/store/slices/todoSlice';
 import type { IItem } from '../../utils/types';
 
-interface TodoItemProps extends IItem {
-  onToggle: () => void;
-}
+function TodoItem({ text, done, id }: IItem) {
+  const dispatch = useDispatch();
 
-function TodoItem({ text, done, onToggle }: TodoItemProps) {
+  const handleToggle = () => {
+    dispatch(toggleTodo(id));
+  };
+
   return (
     <li className="px-3 py-4 border-b border-gray-200 flex items-center">
       <button
         aria-label="check"
-        onClick={onToggle}
+        onClick={handleToggle}
         className={`w-8 h-8 bg-transparent border-2 rounded-full cursor-pointer ${
           done
             ? 'border-green-400 bg-[url("/check.png")] bg-contain bg-center bg-no-repeat'

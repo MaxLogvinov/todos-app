@@ -1,10 +1,9 @@
 import { type ChangeEvent, type FormEvent, useState } from 'react';
+import { addTodo } from '../../servises/store/slices/todoSlice';
+import { useDispatch } from 'react-redux';
 
-interface AddTodoProps {
-  onAddTodo: (text: string) => void;
-}
-
-function AddTodo({ onAddTodo }: AddTodoProps) {
+function AddTodo() {
+  const dispatch = useDispatch();
   const [todoText, setTodoText] = useState('');
 
   function handleChange(e: ChangeEvent<HTMLInputElement>) {
@@ -14,7 +13,7 @@ function AddTodo({ onAddTodo }: AddTodoProps) {
   function onSubmit(e: FormEvent) {
     e.preventDefault();
     if (todoText.trim()) {
-      onAddTodo(todoText.trim());
+      dispatch(addTodo(todoText.trim()));
       setTodoText('');
     }
   }

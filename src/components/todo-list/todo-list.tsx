@@ -3,11 +3,10 @@ import type { IItem } from '../../utils/types';
 
 interface TodoListProps {
   todos: IItem[];
-  onToggleTodo: (id: string) => void;
   view: string;
 }
 
-function TodoList({ todos, onToggleTodo, view }: TodoListProps) {
+function TodoList({ todos, view }: TodoListProps) {
   return (
     <div className="overflow-hidden overflow-y-auto h-48">
       <ul className="list-none m-0 p-0">
@@ -17,7 +16,7 @@ function TodoList({ todos, onToggleTodo, view }: TodoListProps) {
           </h2>
         )}
         {todos.map((item: IItem) => (
-          <TodoItem key={item.id} {...item} onToggle={() => onToggleTodo(item.id)} />
+          <TodoItem key={item.id} {...item} />
         ))}
       </ul>
     </div>
