@@ -47,7 +47,7 @@ function App() {
       text,
       done: false
     };
-    setTodos([...todos, newTodo]);
+    setTodos([newTodo, ...todos]);
   };
 
   const toggleTodo = (id: string) => {
@@ -67,7 +67,7 @@ function App() {
   return (
     <main className="min-h-screen flex flex-col w-full h-full bg-gray-100">
       <section className="w-full flex flex-col">
-        <h1 className="text-[#e8d4c9] font-light text-6xl md:text-8xl tracking-tighter leading-tight my-8">
+        <h1 className="text-[#e8d4c9] font-semibold text-6xl md:text-8xl tracking-tighter leading-tight my-8">
           todos
         </h1>
         <div className="relative flex flex-col justify-between max-w-2xl w-full mx-auto bg-white shadow-lg">
@@ -90,7 +90,7 @@ function App() {
                   style={{
                     transform: `translateY(calc(${index + 1} * 4px))`,
                     zIndex: 100 - index,
-                    maxWidth: `calc(600px - ${index * 10}px)`,
+                    maxWidth: `calc(100% - ${index * 10}px)`,
                     width: '100%'
                   }}
                 />

@@ -20,10 +20,14 @@ function AddTodo({ onAddTodo }: AddTodoProps) {
   }
 
   return (
-    <form className="flex w-full p-3 border-b border-gray-200" onSubmit={onSubmit}>
+    <form
+      className="flex w-full p-3 border-b border-gray-200 items-center"
+      onSubmit={onSubmit}
+      noValidate
+    >
       <button
         aria-label="submit"
-        className="w-8 h-8 bg-transparent bg-[url('/public/arrow down.png')] bg-cover bg-center bg-no-repeat border-none cursor-pointer"
+        className="w-8 h-8 bg-[url('/arrow.png')] bg-contain bg-center bg-no-repeat border-none cursor-pointer"
         type="submit"
       />
       <input

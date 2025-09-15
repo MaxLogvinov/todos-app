@@ -12,7 +12,7 @@ function TodoItem({ text, done, onToggle }: TodoItemProps) {
         onClick={onToggle}
         className={`w-8 h-8 bg-transparent border-2 rounded-full cursor-pointer ${
           done
-            ? 'border-green-400 bg-[url("/check.png")] bg-60% bg-center bg-no-repeat'
+            ? 'border-green-400 bg-[url("/check.png")] bg-contain bg-center bg-no-repeat'
             : 'border-gray-200'
         }`}
       />
