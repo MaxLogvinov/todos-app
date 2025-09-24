@@ -15,27 +15,27 @@ const initialState: TodoState = {
   todos: [
     {
       id: '1',
-      text: 'Купить продукты',
+      text: 'Тестовое задание',
       done: false
     },
     {
       id: '2',
-      text: 'Сделать домашнее задание',
+      text: 'Прекрасный код',
       done: true
     },
     {
       id: '3',
-      text: 'Позвонить маме',
+      text: 'Покрытие тестами',
       done: false
     },
     {
       id: '4',
-      text: 'Записаться к врачу',
+      text: 'Залить на стенд',
       done: false
     },
     {
       id: '5',
-      text: 'Прочитать книгу',
+      text: 'Сдача задания',
       done: true
     }
   ],
