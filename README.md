@@ -1,70 +1,50 @@
-# React + TypeScript + Vite
+# Todo App - Умный менеджер задач
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<div align="center">
 
-Currently, two official plugins are available:
+![Todo App Preview](https://img.shields.io/badge/React-19.1.1-61DAFB?logo=react)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.8.3-3178C6?logo=typescript)
+![Tailwind](https://img.shields.io/badge/Tailwind-4.1.13-06B6D4?logo=tailwindcss)
+![Vite](https://img.shields.io/badge/Vite-7.1.2-646CFF?logo=vite)
+![Redux](https://img.shields.io/badge/Redux_Toolkit-2.9.0-764ABC?logo=redux)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+[![GitHub Pages](https://img.shields.io/badge/🌐_Live_Demo-GitHub_Pages-181717?logo=github)](https://your-username.github.io/your-repo-name)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
-## Expanding the ESLint configuration
+</div>
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 📋 О проекте
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+**Todo App** — это современное, интуитивно понятное веб-приложение для управления задачами, разработанное с использованием передовых технологий фронтенд-разработки. Приложение сочетает в себе минималистичный дизайн с мощной функциональностью.
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+![Todo App Interface](https://via.placeholder.com/800x400/3B82F6/FFFFFF?text=Todo+App+Screenshot)
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## ✨ Ключевые особенности
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### 🎯 Основной функционал
+- **Добавление задач** - Быстрое создание новых задач с валидацией
+- **Отметка выполнения** - Визуальное переключение статуса задачи
+- **Фильтрация задач** - Просмотр: Все / Активные / Выполненные
+- **Очистка выполненных** - Массовое удаление завершенных задач
+- **Адаптивный дизайн** - Идеальное отображение на всех устройствах
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### 🚀 Продвинутые возможности
+- **Визуальные эффекты** - Анимации наведения и нажатия кнопок
+- **Многослойный интерфейс** - Уникальный дизайн с наслоением элементов
+- **Локальное состояние** - Все данные сохраняются во время сессии
+- **Интуитивный UX** - Простое и понятное управление
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-# todos-app
+## 🛠 Технологический стек
+
+### Frontend
+- **React 19.1.1** - Библиотека для построения пользовательских интерфейсов
+- **TypeScript** - Статическая типизация для надежности кода
+- **Vite 7.1.2** - Молниеносная сборка и горячая перезагрузка
+
+### State Management
+- **Redux Toolkit 2.9.0** - Эффективное управление глобальным состоянием
+- **React-Redux 9.2.0** - Интеграция Redux с React компонентами
+
+### Стилизация
+- **Tailwind CSS 4.1.13** - Утилитарный подход к стилизации
+- **Адаптивный дизайн** - Mobile-first подход
